@@ -18,7 +18,7 @@ function! s:goto_step_definition() abort
 		let l:actual_path = g:actual_path . '/behave.py'
 
 		" comand
-		let l:command = 'echo "get_step_definition(\"' . l:actual_feature . '\", \"' . l:line . '\")" | cat ' . l:actual_path . ' - | python -'
+		let l:command = 'echo "get_step_definition(\"' . l:actual_feature . '\", \"' . l:line . '\")" | cat ' . l:actual_path . ' - | python3 -'
 
 		if g:behave_path !=? ''
 			let l:command = 'cd ' . g:behave_path . ';'. l:command
